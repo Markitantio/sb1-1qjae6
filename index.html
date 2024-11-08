@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Fantasy RPG</title>
+    <style>
+      body { 
+        margin: 0; 
+        background: #000;
+        font-family: 'Cinzel', serif;
+      }
+      canvas { display: block; }
+      #ui {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        color: #a00;
+        font-family: 'Cinzel', serif;
+        text-shadow: 2px 2px 2px #000;
+      }
+      #inventory {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        color: #a00;
+        display: none;
+        border: 1px solid #500;
+        min-width: 200px;
+      }
+      .inventory-item {
+        margin: 10px 0;
+        padding: 5px;
+        border-bottom: 1px solid #500;
+      }
+      .item-name {
+        color: #c00;
+        font-weight: bold;
+      }
+      .item-type {
+        color: #700;
+        font-style: italic;
+        font-size: 0.9em;
+      }
+      .item-desc {
+        color: #800;
+        font-size: 0.8em;
+        margin-top: 5px;
+      }
+      #controls {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #700;
+        text-align: center;
+        font-size: 0.8em;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="ui">
+      <div>Vitality: <span id="health">100</span></div>
+      <div>Dark Energy: <span id="mana">100</span></div>
+      <div>Soul Level: <span id="level">1</span></div>
+    </div>
+    <div id="inventory"></div>
+    <div id="controls">
+      [WASD] Move | [SPACE] Jump | [I] Inventory | [E] Interact
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
